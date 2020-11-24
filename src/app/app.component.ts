@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { barChart, lineChartSeries } from './combo-chart-data';
+import { lineChartSeries, areaChartSeries } from './combo-chart-data';
 
 @Component({
   selector: 'app-root',
@@ -22,26 +22,36 @@ export class AppComponent {
     group: 'Ordinal',
     domain: ['#01579b', '#7aa3e5', '#a8385d', '#00bfa5']
   };
+  areaChartScheme = {
+    name: 'coolthree',
+    selectable: true,
+    group: 'Ordinal',
+    domain: ['#0f0']
+  };
 
   // Data
-  barChart: any[] = barChart;
   lineChartSeries: any[] = lineChartSeries;
+  areaChartSeries: any[] = areaChartSeries;
 
   // Props
-  animations: boolean = true;
-  tooltipDisabled: boolean = false;
+  animations: boolean = false;
+  tooltipDisabled: boolean = true;
   gradient: boolean = true;
   showXAxis: boolean = true;
   showYAxis: boolean = true;
-  showLegend: boolean = true;
+
+  showLegend: boolean = false;
   legendTitle: string = 'Legend';
   legendPosition: string = 'right';
+
   showGridLines: boolean = true;
-  showXAxisLabel: boolean = true;
-  showYAxisLabel: boolean = true;
-  xAxisLabel: string = 'Country';
-  yAxisLabel: string = 'GDP Per Capita';
-  yAxisLabelRight: string = 'Utilization';
+
+  showXAxisLabel: boolean = false;
+  xAxisLabel: string = 'Delete';
+
+  showYAxisLabel: boolean = false;
+  yAxisLabel: string = 'Amount';
+  yAxisLabelRight: string = 'Year';
   noBarWhenZero: boolean = true;
 
   /*

@@ -1,42 +1,11 @@
-<h1>START</h1>
-<!-- <combo-chart-component
-  class="chart-container"
-  [view]="view"
-  [scheme]="comboBarScheme"
-  [colorSchemeLine]="lineChartScheme"
-  [results]="barChart"
-
-  [animations]="animations"
-  [lineChart]="lineChartSeries"
-  [tooltipDisabled]="tooltipDisabled"
-  [yAxisTickFormatting]="yLeftTickFormat"
-  [yLeftAxisScaleFactor]="yLeftAxisScale"
-  [yRightAxisScaleFactor]="yRightAxisScale"
-  [yRightAxisTickFormatting]="yRightTickFormat"
-  [gradient]="gradient"
-  [xAxis]="showXAxis"
-  [yAxis]="showYAxis"
-  [legend]="showLegend"
-  [legendTitle]="legendTitle"
-  [legendPosition]="legendPosition"
-  [showGridLines]="showGridLines"
-  [showXAxisLabel]="showXAxisLabel"
-  [showYAxisLabel]="showYAxisLabel"
-  [showRightYAxisLabel]="showYAxisLabel"
-  [xAxisLabel]="xAxisLabel"
-  [yAxisLabel]="yAxisLabel"
-  [yAxisLabelRight]="yAxisLabelRight"
-  [noBarWhenZero]="noBarWhenZero"
-  (select)="onSelect($event)"
-></combo-chart-component> -->
-
 <combo-chart-component
   class="chart-container"
   [view]="view"
-  [scheme]="comboBarScheme"
   [colorSchemeLine]="lineChartScheme"
+  [colorSchemeArea]="areaChartScheme"
   [lineChart]="lineChartSeries"
-  [results]="barChart"
+  [areaChart]="areaChartSeries"
+
 
   [yAxisTickFormatting]="yLeftTickFormat"
   [yLeftAxisScaleFactor]="yLeftAxisScale"

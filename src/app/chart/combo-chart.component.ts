@@ -52,8 +52,11 @@ export class ComboChartComponent extends BaseChartComponent {
   @Input() yRightAxisTickFormatting: any;
   @Input() roundDomains: boolean = false;
   @Input() colorSchemeLine: any[];
+  @Input() colorSchemeArea: any[];
   @Input() autoScale;
   @Input() lineChart: any;
+  @Input() areaChart: any;
+  @Input() baseValue: any = 'auto';
   @Input() yLeftAxisScaleFactor: any;
   @Input() yRightAxisScaleFactor: any;
   @Input() rangeFillOpacity: number;
@@ -77,6 +80,7 @@ export class ComboChartComponent extends BaseChartComponent {
   colors: ColorHelper;
   colorsLine: ColorHelper;
   margin: any[] = [10, 20, 10, 20];
+  colorsArea: ColorHelper;
   xAxisHeight: number = 0;
   yAxisWidth: number = 0;
   legendOptions: any;
@@ -345,6 +349,7 @@ export class ComboChartComponent extends BaseChartComponent {
     }
     this.colors = new ColorHelper(this.scheme, this.schemeType, domain, this.customColors);
     this.colorsLine = new ColorHelper(this.colorSchemeLine, this.schemeType, domain, this.customColors);
+    this.colorsArea = new ColorHelper(this.colorSchemeArea, this.schemeType, domain, this.customColors);
   }
 
   getLegendOptions() {
